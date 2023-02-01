@@ -27,9 +27,9 @@ const gabarito = ["A", "C", "B", "A", "A", "B", "C", "A", "B", "C"];
 const opcoes = ["A", "B", "C"];
 
 listaAlunos.forEach((element) => {
-  let respostas: any[] = [];
+  let respostas: string[] = [];
   gabarito.forEach((index) => {
-    const sorteio = Math.floor(Math.random() * 3);
+    const sorteio = Math.floor(Math.random() * opcoes.length + 1);
     respostas.push(opcoes[sorteio]);
   });
 
@@ -51,6 +51,7 @@ listaAlunos.forEach((element) => {
 const aprovados = listaAlunos.filter(
   (aluno) => aluno.status.toUpperCase() === "APROVADO"
 );
+
 const reprovados = listaAlunos.filter(
   (aluno) => aluno.status.toUpperCase() === "REPROVADO"
 );

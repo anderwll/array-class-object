@@ -22,7 +22,7 @@ const opcoes = ["A", "B", "C"];
 listaAlunos.forEach((element) => {
     let respostas = [];
     gabarito.forEach((index) => {
-        const sorteio = Math.floor(Math.random() * 3);
+        const sorteio = Math.floor(Math.random() * opcoes.length + 1);
         respostas.push(opcoes[sorteio]);
     });
     let acertos = 0;

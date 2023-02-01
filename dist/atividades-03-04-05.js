@@ -23,14 +23,15 @@ console.log(listaMenor23);
 const listaMenor30 = listaPessoas.filter((pessoa) => {
     return pessoa.idade < 30;
 });
-const mediaMenor30 = listaMenor30.reduce((result, prox) => result + prox.idade / listaMenor30.length, 0);
+const mediaMenor30 = listaMenor30.reduce((result, prox) => result + prox.idade, 0) /
+    listaMenor30.length;
 console.log(mediaMenor30);
 // --- ATIVIDADE 05 ---
 const listaSalarioMenor1023 = listaPessoas.filter((pessoa) => pessoa.salario < 1023);
 const listaFiltrada = listaSalarioMenor1023.map((pessoa) => {
     return {
         nome: pessoa.nome,
-        idade: pessoa.idade
+        idade: pessoa.idade,
     };
 });
 console.log(listaFiltrada);
